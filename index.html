@@ -42,43 +42,53 @@
     </main>
     <script>
         //Exercise 1 - create an array of your 6 favorite things
-        
-
+        var favThings = ['drawing','cats','dogs','gym','cars','learning'];
+        ;
         //Exercise 2 - show your most favorite thing on the page
         let myFavorite = document.getElementById('my-favorite');//selects the tag
-        myFavorite.innerHTML;//adds content inside the tag
+        myFavorite.innerHTML = favThings[0]; //adds content inside the tag
 
         //Exercise 3 - change your favorite thing and show it on the page
-        
-        myFavorite.innerHTML;
+        favThings[0] = 'driving';
+        myFavorite.innerHTML = favThings[2];
 
         //Exercise 4 - Use the length property to show the number of items in your array
         let total = document.getElementById('total');
-        
-        total.innerHTML;
+        arrayLength = favThings.length;
+        total.innerHTML = arrayLength;
 
         //Exercise 5 - iterate through the array and show it on the page using the forEach() method.
         let myList = document.getElementById('all-favorites');
-        
-
-        myList.innerHTML;
-
+        myList.innerHTML = displayArray(favThings);
+        function displayArray(_____){
+        return `<li>${_____}</li>`;
+            };
         //Exercise 6 Concatenation of arrays
         let more = document.getElementById('more-favorites');
-
-        more.innerHTML;
+        fruits = ['apple' , 'banana', 'orange'];
+        let combinedArray = favThings.concat(fruits);
+        more.innerHTML = displayArray(combinedArray);
 
         //Exercise 7 push a new item to your array
         let pushed = document.getElementById('favorites-plus-one');
+        favThings.push('reading');
+        pushed.innerHTML = displayArray(favThings);
 
-        pushed.innerHTML;
-
-       //Exercise 8 push a new item to your array
+       //Exercise 8 pop an item in your array
        
         let popped = document.getElementById('favorites-minus-one');
-        popped.innerHTML;
+        fruits.pop();
+        popped.innerHTML = displayArray(fruits);
 
         //Exercises 9-12, practice slice(), shift(), unshift() in arrays.js
+
+        //9
+        var slicePractice = fruits.slice(0,2);
+        //10
+        var shiftPractice = fruits.shift();
+        //11
+        var unshiftPractice = fruits.unshift("Raspberries");
+    
     </script>
 
 </body>
