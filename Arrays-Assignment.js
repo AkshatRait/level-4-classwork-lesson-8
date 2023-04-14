@@ -6,7 +6,9 @@ var names = ['john', 'shawn', 'don', 'akshat', 'johnny', 'luis', 'alan', 'brian'
 var length = names.length;
 console.log(length);
 //4 iterate over the array and print out each element
-
+for(i of names){
+   console.log(names);
+}
 //5 create a function that takes in a string and in the function iterate over each element in the array and for each element check if its equal to the parameter
   // if it is then return that string
   //else continue
